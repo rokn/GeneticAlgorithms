@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
-#include "chromo.h"
-#include "genetics.h"
+#include "GENETICS/chromo.h"
+#include "GENETICS/genetics.h"
 #include <time.h>
 #include <stdlib.h>
 #include <cmath>
 
 #define POPULATION_SIZE 100
-#define GENES_COUNT 300
+#define GENES_COUNT 30
 #define GENE_LENGTH 4
 #define CROSSOVER_RATE 0.7f
 #define MUTATION_RATE 0.01f
@@ -43,6 +43,7 @@ int main()
 	{
 		generations ++;
 
+		PrintSolution(population.front().get_genes());
 		if(generations > MAX_GENERATIONS)
 		{
 			break;
@@ -104,14 +105,16 @@ float CalculateFitness(string genes, float target)
 
 	vector<int> decoded = DecodeGenes(genes);
 
-	if(decoded.size() <= 0)
+	if(decoded.empty())
 	{
 		return 0;
 	}
 
+	fitness = decoded.front();
+
 	vector<int>::iterator i;	
 
-	for (i = decoded.begin(); i != decoded.end(); ++i)
+	for (i = decoded.begin() + 1; i != decoded.end(); ++i)
 	{		
 		switch(*i)
 		{
@@ -161,7 +164,7 @@ float CalculateFitness(string genes, float target)
 vector<int> DecodeGenes(string genes)
 {
 	vector<int> decoded;
-	bool operTime = true;
+	bool operTime = false;
 	int i;
 	int curr_gene;
 
@@ -181,7 +184,7 @@ vector<int> DecodeGenes(string genes)
 		}
 	}
 
-	if(decoded.size() % 2 != 0)
+	if(!decoded.empty() && decoded.size() % 2 == 0)
 	{
 		decoded.pop_back();
 	}
@@ -207,9 +210,7 @@ int BinToDec(string binary)
 
 void PrintSolution(string genes)
 {
-	vector<int> decoded = DecodeGenes(genes);	
-
-	cout << "0 ";	
+	vector<int> decoded = DecodeGenes(genes);
 
 	int i;
 	
