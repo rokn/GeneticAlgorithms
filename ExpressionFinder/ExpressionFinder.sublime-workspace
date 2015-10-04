@@ -1,0 +1,1060 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gene",
+				"generations"
+			],
+			[
+				"print",
+				"PrintSolution"
+			],
+			[
+				"POP",
+				"POPULATION_SIZE"
+			],
+			[
+				"get",
+				"get_genes"
+			],
+			[
+				"set",
+				"set_fitness"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"chr",
+				"chromosome_t"
+			],
+			[
+				"off",
+				"offspring1"
+			],
+			[
+				"offs",
+				"offspring1"
+			],
+			[
+				"decode",
+				"decoded"
+			],
+			[
+				"genes",
+				"genes"
+			],
+			[
+				"GENES",
+				"GENES_COUNT"
+			],
+			[
+				"Chromo",
+				"chromosome_t"
+			],
+			[
+				"RAND",
+				"RANDOM_NUM"
+			],
+			[
+				"random",
+				"RANDOM_NUM"
+			],
+			[
+				"Random",
+				"RANDOM_NUM"
+			],
+			[
+				"RNA",
+				"RANDOM_NUM"
+			],
+			[
+				"chromoso",
+				"chromosome_t"
+			],
+			[
+				"chromo",
+				"chromosome_t"
+			],
+			[
+				"chom",
+				"chromosome_t	(main.cpp)"
+			],
+			[
+				"chrom",
+				"chromosome_t	(chromo.h)"
+			],
+			[
+				"new",
+				"new_genes"
+			],
+			[
+				"sol",
+				"solution"
+			],
+			[
+				"Gra",
+				"GraphicsDevice"
+			],
+			[
+				"KeyIs",
+				"KeyIsDown	(AGE_Input.h)"
+			],
+			[
+				"AGE_K",
+				"AGE_KeyIsDown	(AGE_Input.h)"
+			],
+			[
+				"AGE_Gra",
+				"AGE_GraphicsDevice"
+			],
+			[
+				"Sprite",
+				"AGE_SpriteBatch"
+			],
+			[
+				"renderer",
+				"renderer"
+			],
+			[
+				"AGE_Sprit",
+				"AGE_SpriteBatch"
+			],
+			[
+				"AGE_Sprite",
+				"AGE_SpriteBatch	(AGE_Graphics.h)"
+			],
+			[
+				"render",
+				"renderSprite	(AGE_Sprite.cpp)"
+			],
+			[
+				"sprite",
+				"spriteBatch_age"
+			],
+			[
+				"spr",
+				"spriteBatch_age"
+			],
+			[
+				"renderspri",
+				"renderSprite_age"
+			],
+			[
+				"spriteBatch_",
+				"spriteBatchGui_age"
+			],
+			[
+				"Res",
+				"reset"
+			],
+			[
+				"sprte",
+				"spriteBatch_age"
+			],
+			[
+				"Get",
+				"GetY"
+			],
+			[
+				"windo",
+				"windowRect"
+			],
+			[
+				"Ge",
+				"GetY	(AGE.h)"
+			],
+			[
+				"for",
+				"for_	For Loop"
+			],
+			[
+				"fo",
+				"forv	Vector For Loop"
+			],
+			[
+				"retur",
+				"return"
+			],
+			[
+				"Rect",
+				"AGE_Rect"
+			],
+			[
+				"left",
+				"leftTeamEntities"
+			],
+			[
+				"isde",
+				"IsDead"
+			],
+			[
+				"enti",
+				"entity"
+			],
+			[
+				"Stack",
+				"StackTextBackground"
+			],
+			[
+				"spriteBat",
+				"spriteBatchGui_age"
+			],
+			[
+				"sta",
+				"Stack"
+			],
+			[
+				"sprin",
+				"snprintf"
+			],
+			[
+				"AGE_SpriteLoad",
+				"AGE_SpriteLoadFromText"
+			],
+			[
+				"BattleEntitySta",
+				"BattleEntityRemoveFromStack"
+			],
+			[
+				"all",
+				"allHP"
+			],
+			[
+				"remo",
+				"removal"
+			],
+			[
+				"rend",
+				"renderSprite"
+			],
+			[
+				"curr",
+				"currAnimation"
+			],
+			[
+				"end",
+				"end_turn"
+			],
+			[
+				"ProjectileSet",
+				"ProjectileSetDestroyEvent"
+			],
+			[
+				"proje",
+				"projectile_t"
+			],
+			[
+				"Projec",
+				"ProjectileDestroy"
+			],
+			[
+				"des",
+				"ProjectileDestroy"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"ene",
+				"enemiesList"
+			],
+			[
+				"current",
+				"CurrentBattle"
+			],
+			[
+				"remove",
+				"remove_walking_squares"
+			],
+			[
+				"enem",
+				"enemy"
+			],
+			[
+				"sele",
+				"selectedSquare"
+			],
+			[
+				"enemie",
+				"enemiesList"
+			],
+			[
+				"Enemy",
+				"EntityEnemy"
+			],
+			[
+				"pos",
+				"Position"
+			],
+			[
+				"Battlen",
+				"BattleEntity"
+			],
+			[
+				"AGE_LIst",
+				"AGE_ListInit"
+			],
+			[
+				"lefte",
+				"leftTeam"
+			],
+			[
+				"Right",
+				"RightIsPressed"
+			],
+			[
+				"Left",
+				"LeftJustPressed"
+			],
+			[
+				"AGE_ListRemova",
+				"AGE_ListRemoveAt"
+			],
+			[
+				"AGE_Destro",
+				"AGE_SpriteDestroy"
+			],
+			[
+				"pr",
+				"projectileSpritesList"
+			],
+			[
+				"Pro",
+				"PROJECTILES_COUNT"
+			],
+			[
+				"pro",
+				"projectilesList"
+			],
+			[
+				"projec",
+				"projectile"
+			],
+			[
+				"AGE_Helper",
+				"AGE_Helper_FindRotation"
+			],
+			[
+				"AGE_Vector",
+				"AGE_VectorMultiply"
+			],
+			[
+				"proj",
+				"projectile"
+			],
+			[
+				"AGE_HElper",
+				"AGE_Helper_RectCenter"
+			],
+			[
+				"ag",
+				"AGE_List"
+			],
+			[
+				"project",
+				"projectilesList"
+			],
+			[
+				"AGE_Vect",
+				"AGE_VectorLength"
+			],
+			[
+				"AGE_update",
+				"AGE_CameraUpdate"
+			],
+			[
+				"AGE_camera",
+				"AGE_FocusCamera"
+			],
+			[
+				"fiel",
+				"FieldPosition"
+			],
+			[
+				"rig",
+				"rightA"
+			],
+			[
+				"righ",
+				"rightB"
+			],
+			[
+				"view",
+				"AGE_ViewRect"
+			],
+			[
+				"camear",
+				"camera_age"
+			],
+			[
+				"wal",
+				"walkableSquares"
+			],
+			[
+				"AGE_sprte",
+				"AGE_Sprite"
+			],
+			[
+				"marks",
+				"mark_surrounding_squares"
+			],
+			[
+				"WAlka",
+				"WalkableSquare"
+			],
+			[
+				"walk",
+				"walkableSquares"
+			],
+			[
+				"Battl",
+				"BattleEntity"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.cpp",
+			"settings":
+			{
+				"buffer_size": 3900,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"last_filter": "git push ",
+		"selected_items":
+		[
+			[
+				"git push ",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"gdb",
+				"SublimeGDB: Open Breakpoint View"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git add ",
+				"Git: Add..."
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder"
+	],
+	"file_history":
+	[
+		"/home/rokner/GeneticAlgorithms/PhraseFinder/main.cpp",
+		"/home/rokner/HelsysRemake/AGE/makefile",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/main.cpp",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/log.txt",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/GENETICS/makefile",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/makefile",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/library_make",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/genetics.h",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/chromo.h",
+		"/home/rokner/neural/demos/eaters/eaters.h",
+		"/home/rokner/neural/demos/eaters/main.cpp",
+		"/home/rokner/neural/demos/eaters/allegroutil.h",
+		"/home/rokner/neural/demos/eaters/allegroutil.cpp",
+		"/home/rokner/Downloads/allegro-5.1.12.0/README_cmake.txt",
+		"/home/rokner/neural/demos/eaters/food.cpp",
+		"/home/rokner/Desktop/ga_tutorial.cpp",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/genetics.cpp",
+		"/home/rokner/.cache/.fr-LEsHt8/Basic_Genetic_Algorithm/ga_tutorial.cpp",
+		"/home/rokner/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/rokner/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/rokner/.config/sublime-text-3/Packages/SublimeGDB/Default.sublime-keymap",
+		"/home/rokner/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
+		"/home/rokner/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/home/rokner/GeneticAlgorithms/ExpressionFinder/chromo.cpp",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/rokner/.cache/.fr-LEsHt8/Basic_Genetic_Algorithm/genetics.cpp",
+		"/home/rokner/.cache/.fr-CcgTgt/Basic_Genetic_Algorithm/ga_tutorial.cpp",
+		"/home/rokner/HelsysRemake/makefile",
+		"/home/rokner/HelsysRemake/main.cpp",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Terminal.sublime-settings",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Main.sublime-menu",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/messages.json",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/package-metadata.json",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/PS.bat",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/PS.ps1",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/readme.creole",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Side Bar.sublime-menu",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/iTerm.sh",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Default (Windows).sublime-keymap",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Default.sublime-commands",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Context.sublime-menu",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Terminal.sh",
+		"/home/rokner/.config/sublime-text-3/Packages/Terminal/Terminal.py",
+		"/home/rokner/CodeChef/Odd.c",
+		"/home/rokner/HelsysRemake/log.txt",
+		"/home/rokner/HelsysRemake/BOX2D/Box2D.h",
+		"/home/rokner/Box2D/Box2D/Build/gmake/Box2D.make",
+		"/home/rokner/Box2D/Box2D/Build/gmake/obj/Debug/Box2D/b2WeldJoint.d",
+		"/home/rokner/Box2D/Box2D/Box2D/Box2D.h",
+		"/home/rokner/Downloads/Box2D_v2.1.2/Box2D/Build/HelloWorld/Makefile",
+		"/home/rokner/Downloads/Box2D_v2.1.2/Box2D/CMakeLists.txt",
+		"/home/rokner/LuaBridge/Source/LuaBridge/detail/Stack.h",
+		"/home/rokner/LuaBridge/README.md",
+		"/home/rokner/software_engineering_2015/class1_hm_quadratic_equation/A_3_Antonio_Mindov.rb",
+		"/home/rokner/software_engineering_2015/class1_hm_quadratic_equation/log.txt",
+		"/home/rokner/HelsysRemake/AGE/AGE_Input.h",
+		"/home/rokner/HelsysRemake/AGE/log.txt",
+		"/home/rokner/HelsysRemake/AGE/AGE.h",
+		"/home/rokner/HelsysRemake/AGE/AGE_SpriteBatch.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Sprite.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Graphics.h",
+		"/home/rokner/HelsysRemake/AGE/AGE_Core.cpp",
+		"/home/rokner/HelsysRemake/main.h",
+		"/home/rokner/HelsysRemake/AGE/AGE_Camera.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Mouse_Input.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Keyboard_Input.cpp",
+		"/home/rokner/HelsysRemake/AGE/l",
+		"/home/rokner/Desktop/Link to MyGame/battlefield.c",
+		"/home/rokner/Desktop/Link to MyGame/battle_entity.c",
+		"/home/rokner/Desktop/Link to MyGame/battle.c",
+		"/home/rokner/HelsysRemake/AGE/AGE_Rectangle.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Animation.cpp",
+		"/home/rokner/HelsysRemake/README.md",
+		"/home/rokner/Desktop/Link to MyGame/AGE/AGE_Sprite.c",
+		"/home/rokner/HelsysRemake/AGE/AGE_Vector.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Generics.h",
+		"/home/rokner/HelsysRemake/AGE/AGE_Helper.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_Timer.cpp",
+		"/home/rokner/HelsysRemake/AGE/AGE_List.cpp",
+		"/home/rokner/software_engineering_2015/VhodnoNivo/Antonio_Mindov/Antonio_Mindov_{19}.c",
+		"/home/rokner/software_engineering_2015/VhodnoNivo/Antonio_Mindov/Antonio_Mindov_{17}.c",
+		"/home/rokner/software_engineering_2015/VhodnoNivo/Antonio_Mindov/Antonio_Mindov_{18}.c",
+		"/home/rokner/ico.c",
+		"/home/rokner/Desktop/Link to MyGame/AGE/AGE_Core.c",
+		"/home/rokner/Desktop/Link to MyGame/AGE/AGE.h",
+		"/home/rokner/HelsysRemake/AGE/AGE_SpriteBatch.c",
+		"/home/rokner/Desktop/Link to MyGame/AGE/AGE_SpriteBatch.c",
+		"/home/rokner/Desktop/Link to MyGame/main.c",
+		"/home/rokner/Desktop/Link to MyGame/main.h",
+		"/home/rokner/Desktop/SDL/MyGame/battle_entity.h",
+		"/home/rokner/Desktop/SDL/MyGame/log.txt",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Sprite.c",
+		"/home/rokner/Desktop/SDL/MyGame/battlefield.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_SpriteBatch.c",
+		"/home/rokner/Downloads/valgrind-3.10.1 (2)/README",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Animation.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/log.txt",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Graphics.h",
+		"/home/rokner/Desktop/SDL/MyGame/projectile.h",
+		"/home/rokner/Desktop/SDL/MyGame/battlefield.h",
+		"/home/rokner/Desktop/SDL/MyGame/battle.h",
+		"/home/rokner/Desktop/SDL/MyGame/Entities/Entity_1.ini",
+		"/home/rokner/Desktop/SDL/MyGame/projectile.c",
+		"/home/rokner/Desktop/SDL/MyGame/battle.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Camera.c",
+		"/home/rokner/Desktop/SDL/MyGame/battle_entity.c",
+		"/home/rokner/Desktop/SDL/Test/Helsys3/battle_entity.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Helper.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Mouse_Input.c",
+		"/home/rokner/Desktop/SDL/MyGame/makefile",
+		"/home/rokner/Desktop/SDL/MyGame/#include \"projectile.h\"",
+		"/home/rokner/Desktop/Link to MyGame/battlefield.h",
+		"/home/rokner/Desktop/Link to MyGame/battle_entity.h",
+		"/home/rokner/Desktop/Link to MyGame/battle.h",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Vector.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Rectangle.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE.h",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Core.c",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/makefile",
+		"/home/rokner/Desktop/SDL/MyGame/main.h",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_Generics.h",
+		"/home/rokner/Desktop/SDL/MyGame/AGE/AGE_List.c"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"std::",
+			"	\n",
+			"{\n",
+			"	while(!end)\n	{\n\n		tmp.clear();\n		vector<chromosome_t>::iterator it;\n\n		for (it = population.begin(); it != population.end(); ++it)\n		{\n\n			it->set_fitness(CalculateFitness(it->get_genes(), target));\n\n			if(it->get_fitness() > 100.0f)\n			{\n				end = true;\n			}\n		}\n\n		for (i = 0; i < POPULATION_SIZE; ++i)\n		{\n			string offspring1 = roulette_selection(&population, POPULATION_SIZE);\n			string offspring2 = roulette_selection(&population, POPULATION_SIZE);\n			\n			crossover(CROSSOVER_RATE, &offspring1, &offspring2);\n\n			mutate(MUTATION_RATE, &offspring1);\n			mutate(MUTATION_RATE, &offspring2);\n\n			chromosome_t chromo1(offspring1, 0);\n			chromosome_t chromo2(offspring2, 0);\n\n			tmp.push_back(chromo1);\n			tmp.push_back(chromo2);\n		}		\n\n		population = tmp;\n\n		\n	}\n",
+			"cout",
+			"population",
+			"cout",
+			"<< ",
+			" endl;\n		population.push_back(chromo);",
+			"<< ",
+			"cout << chromo.get_genes() << endl;",
+			"std::",
+			".",
+			"open_terminal",
+			"open_termainl",
+			"Open",
+			"Box2D/",
+			"graphicsDevice",
+			"AGE_GraphicsDevice",
+			"gRenderer",
+			"gWindow",
+			"AGE_GraphicDevice",
+			"AGE_ViewRect",
+			"oldBounds->",
+			"window",
+			"render",
+			"AGE_List",
+			"renderSpritesList",
+			"i",
+			"AGE_List",
+			"AGE_LIst",
+			"cpp",
+			"pos.",
+			"Offset.",
+			"AGE_ViewRect",
+			"windowRect",
+			"windowRect.",
+			"windowRect",
+			"SDL_Rect",
+			"free",
+			"windowRect",
+			".Y",
+			".X",
+			"&spriteBatchGui_age.renderSpritesList",
+			"&spriteBatch_age.renderSpritesList",
+			"Height",
+			"Width",
+			"camera_age.",
+			"camera_age",
+			"animation",
+			"Y",
+			"X",
+			"v.",
+			"list",
+			"sprite",
+			"c",
+			"Height",
+			"Width",
+			"Y",
+			"X",
+			"AGE_ViewRect",
+			"AGE_WindowRect",
+			"fullscree",
+			"Init",
+			"CURRENT_FPS",
+			".c",
+			"timer",
+			"rect2.",
+			"rect.",
+			"rect1.",
+			"userUpdate",
+			"isdes",
+			"destroy",
+			"Destroy",
+			"Draw",
+			"*,",
+			"stats",
+			"Stack",
+			"stats",
+			"Stack",
+			"ticks",
+			"printf(",
+			"create",
+			"load",
+			"collisionRect",
+			"update",
+			"end_t",
+			"mouse_input",
+			"mouse_",
+			"end_t",
+			"remove",
+			"enemiesList",
+			"mouse",
+			"selecte",
+			"attack",
+			"draw",
+			"selecte",
+			"DrawSet",
+			"spriteBatch_age.cameraOffset",
+			"cameraOffset",
+			"find_walkable_square",
+			"Move"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"population",
+			"cout",
+			"",
+			"->",
+			"",
+			"engine",
+			"AGE_Engine",
+			"this->renderer",
+			"renderer",
+			"window",
+			"AGE_GraphicsDevice",
+			"oldBounds.",
+			"gWindow",
+			"vector<AGE_Rect>",
+			"renderSprites",
+			"it",
+			"pos->",
+			"Offset->",
+			"windowRect->",
+			"freeTexture",
+			".GetY()",
+			".GetX()",
+			"GetX()",
+			"",
+			" ",
+			"",
+			"height",
+			"width",
+			"this->",
+			"this",
+			"y",
+			"x",
+			"this->",
+			"this",
+			"cpp",
+			"height",
+			"width",
+			"y",
+			"x",
+			"windowRect",
+			"current_fps",
+			".cpp",
+			"this",
+			"rect.",
+			"this->",
+			"camera_age.Offset",
+			"Offset"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								3900
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CppYCM.2":
+	{
+		"height": 0.0
+	},
+	"output.CppYCM.3":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "ExpressionFinder.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"battle",
+				"battle_entity.h"
+			],
+			[
+				"battleent",
+				"battle_entity.h"
+			],
+			[
+				"log",
+				"log.txt"
+			],
+			[
+				"battl",
+				"battle.c"
+			],
+			[
+				"sprite",
+				"AGE/AGE_Sprite.c"
+			],
+			[
+				"spriteba",
+				"AGE/AGE_SpriteBatch.c"
+			],
+			[
+				"animat",
+				"AGE/AGE_Animation.c"
+			],
+			[
+				"anima",
+				"AGE/AGE_Animation.c"
+			],
+			[
+				"camera",
+				"AGE/AGE_Camera.c"
+			],
+			[
+				"proje",
+				"projectile.c"
+			],
+			[
+				"battlef",
+				"battlefield.h"
+			],
+			[
+				"battleen",
+				"battle_entity.c"
+			],
+			[
+				"battlf",
+				"battlefield.h"
+			],
+			[
+				"mouse",
+				"AGE/AGE_Mouse_Input.c"
+			],
+			[
+				"battlefield",
+				"battlefield.c"
+			],
+			[
+				"recta",
+				"AGE/AGE_Rectangle.c"
+			],
+			[
+				"age",
+				"AGE/AGE.h"
+			],
+			[
+				"rect",
+				"AGE/AGE_Rectangle.c"
+			],
+			[
+				"make",
+				"AGE/makefile"
+			],
+			[
+				"core",
+				"AGE/AGE_Core.c"
+			],
+			[
+				"og",
+				"AGE/log.txt"
+			],
+			[
+				"batt",
+				"battle.c"
+			],
+			[
+				"main",
+				"main.h"
+			],
+			[
+				"gene",
+				"AGE/AGE_Generics.h"
+			],
+			[
+				"list",
+				"AGE/AGE_List.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
