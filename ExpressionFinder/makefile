@@ -1,12 +1,12 @@
 #OBJS specifies which files to compile //battlefield.cpp tiles.cpp battle_entity.cpp battle.cpp projectile.cpp
-OBJS = main.cpp chromo.cpp genetics.h
+OBJS = main.cpp chromo.cpp genetics.cpp
 
 #CC specifies which compiler we're using
 CC = g++
 
 #compiler flags
 # -w supress warnings
-COMPILER_FLAGS = -w -g
+COMPILER_FLAGS = -w
 
 #error log
 ERROR_LOG = log.txt
