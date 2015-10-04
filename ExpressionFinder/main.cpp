@@ -7,16 +7,18 @@
 #include <cmath>
 
 #define POPULATION_SIZE 100
-#define GENES_COUNT 5
+#define GENES_COUNT 300
 #define GENE_LENGTH 4
 #define CROSSOVER_RATE 0.7f
 #define MUTATION_RATE 0.01f
+#define MAX_GENERATIONS 1000
 
 using namespace std;
 
 float CalculateFitness(string, float);
 vector<int> DecodeGenes(string);
 int BinToDec(string);
+void PrintSolution(string);
 
 int main()
 {
@@ -24,7 +26,8 @@ int main()
 	vector<chromosome_t> population;
 	vector<chromosome_t> tmp;
 	bool end = false;
-	float target;
+	float target  = 0;
+	int generations = 0;
 
 	cin >> target;
 
@@ -38,6 +41,12 @@ int main()
 
 	while(!end)
 	{
+		generations ++;
+
+		if(generations > MAX_GENERATIONS)
+		{
+			break;
+		}
 
 		tmp.clear();
 		vector<chromosome_t>::iterator it;
@@ -47,9 +56,11 @@ int main()
 
 			it->set_fitness(CalculateFitness(it->get_genes(), target));
 
-			if(it->get_fitness() > 100.0f)
+			if(it->get_fitness() > 999.0f)
 			{
 				end = true;
+				PrintSolution(it->get_genes());
+				break;
 			}
 		}
 
@@ -75,38 +86,65 @@ int main()
 		
 	}
 
+	if(generations <= MAX_GENERATIONS)
+	{
+		cout << "Found in " << generations << " generations!"<< endl;
+	}
+	else
+	{
+		cout << "The program could not find a solution in over " << MAX_GENERATIONS << " generations" << endl;
+	}
+
 	return 0;
 }
 
 float CalculateFitness(string genes, float target)
 {
-	float fitness;
+	float fitness = 0;
 
 	vector<int> decoded = DecodeGenes(genes);
+
+	if(decoded.size() <= 0)
+	{
+		return 0;
+	}
 
 	vector<int>::iterator i;	
 
 	for (i = decoded.begin(); i != decoded.end(); ++i)
-	{
+	{		
 		switch(*i)
 		{
 			case 10:
-				fitness += decoded[*(++i)];
+				fitness += *(++i);
 				break;
 
 			case 11:
-				fitness -= decoded[*(++i)];
+				fitness -= *(++i);
 				break;
 
 			case 12:
-				fitness *= decoded[*(++i)];
+				fitness *= *(++i);
 				break;
 
 			case 13:
-				fitness /= decoded[*(++i)];
+				int numb = *(++i);
+
+				if(numb != 0)
+				{
+					fitness /= numb;
+				}
+				else
+				{
+					return 0;
+				}
+
 				break;
 		}
-	}	
+	}
+
+	// PrintSolution(genes);
+	// cout << "f" << fitness << endl;
 
 	if(fitness == target)
 	{
@@ -134,11 +172,18 @@ vector<int> DecodeGenes(string genes)
 		if(operTime && curr_gene >= 10 && curr_gene < 14)
 		{
 			decoded.push_back(curr_gene);
+			operTime = false;
 		}
 		else if(!operTime && curr_gene < 10)
 		{
 			decoded.push_back(curr_gene);
+			operTime = true;
 		}
+	}
+
+	if(decoded.size() % 2 != 0)
+	{
+		decoded.pop_back();
 	}
 
 	return decoded;
@@ -158,4 +203,46 @@ int BinToDec(string binary)
 	}
 
 	return numb;
+}
+
+void PrintSolution(string genes)
+{
+	vector<int> decoded = DecodeGenes(genes);	
+
+	cout << "0 ";	
+
+	int i;
+	
+	for (i = 0; i < decoded.size(); ++i)
+	{
+		if(decoded[i] < 10)
+		{
+			cout << decoded[i];
+		}
+		else
+		{
+			switch(decoded[i])
+			{
+				case 10:
+					cout << "+";
+					break;
+
+				case 11:
+					cout << "-";
+					break;
+
+				case 12:
+					cout << "*";
+					break;
+
+				case 13:
+					cout << "/";
+					break;
+			}
+		}
+
+		cout << " ";
+	}
+
+	cout << endl;
 }

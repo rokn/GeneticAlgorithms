@@ -6,7 +6,7 @@ CC = g++
 
 #compiler flags
 # -w supress warnings
-COMPILER_FLAGS = -w
+COMPILER_FLAGS = -w -g
 
 #error log
 ERROR_LOG = log.txt
