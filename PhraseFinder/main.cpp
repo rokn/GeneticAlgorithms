@@ -6,10 +6,10 @@
 #include <stdlib.h>
 #include <cmath>
 
-#define POPULATION_SIZE 200
+#define POPULATION_SIZE 300
 #define GENE_LENGTH 5
 #define CROSSOVER_RATE 0.7f
-#define MUTATION_RATE 0.01f
+#define MUTATION_RATE 0.001f
 #define MAX_GENERATIONS 10000
 
 using namespace std;
@@ -23,7 +23,7 @@ void PrintSolution(string);
 bool contains(string, char);
 
 int main()
-{
+{	
 	srand(time(NULL));
 	vector<chromosome_t> population;
 	vector<chromosome_t> tmp;
@@ -124,14 +124,14 @@ float CalculateFitness(string genes, string target)
 	{
 		if(decoded.at(i) == target.at(i))
 		{
-			fitness += 10;
+			fitness += 5;
 		}
 		else if (contains(target, decoded.at(i)))
 		{
 			fitness++;
 		}
 	}
-
+	fitness *= fitness;
 	// PrintSolution(genes);
 	// cout << "f" << fitness << endl;	
 
