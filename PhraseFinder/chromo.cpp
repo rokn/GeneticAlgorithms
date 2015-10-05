@@ -1,4 +1,5 @@
 #include "chromo.h"
+#include <vector>
 
 #define RANDOM_NUM	((float)rand()/(RAND_MAX+1) + 1)
 
