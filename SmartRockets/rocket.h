@@ -13,10 +13,12 @@ class rocket_t
 	float speed;
 	float rotation;
 	AGE_Vector* position;
+	AGE_Vector* origin;
+	AGE_Sprite* sprite;
 
 public:
-	rocket_t(float);
-	rocket_t(DNA_t ,AGE_Vector , float);
+	rocket_t(AGE_Vector, float);
+	rocket_t(const DNA_t& ,const AGE_Vector& , float);
 	void update();
 	DNA_t get_dna();
 	void draw(AGE_SpriteBatch);
