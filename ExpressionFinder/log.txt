@@ -1,0 +1,3 @@
+/usr/bin/ld: skipping incompatible ./GENETICS/libGENETICS.a when searching for -lGENETICS
+/usr/bin/ld: cannot find -lGENETICS
+collect2: error: ld returned 1 exit status

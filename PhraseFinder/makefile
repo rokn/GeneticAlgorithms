@@ -1,5 +1,5 @@
 #OBJS specifies which files to compile //battlefield.cpp tiles.cpp battle_entity.cpp battle.cpp projectile.cpp
-OBJS = main.cpp
+OBJS = main.cpp genetics.cpp chromo.cpp
 
 #CC specifies which compiler we're using
 CC = g++
@@ -12,7 +12,7 @@ COMPILER_FLAGS = -w -g
 ERROR_LOG = log.txt
 
 #LINKER FLAGS for libraries   -L./BOX2D -lBox2D
-LINKER_FLAGS = -lm -L./GENETICS -lGENETICS
+LINKER_FLAGS = -lm
 
 #obj name for the name of the exe
 OBJ_NAME = PROG

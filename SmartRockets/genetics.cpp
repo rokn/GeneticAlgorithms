@@ -1,6 +1,5 @@
 #include "genetics.h"
-
-#define RANDOM_NUM	((float)rand()/(RAND_MAX+1) + 1)
+#include "main.h"
 
 // std::string get_random_chromo(int length)
 // {
@@ -23,12 +22,11 @@
 // 	return genes;
 // }
 
-template <typename T>
-chromosome_t<T> roulette_selection(typename std::vector< chromosome_t<T> > *population, int pop_size)
+DNA_t roulette_selection(std::vector<DNA_t> *population, int pop_size)
 {
 	float total_fitness = 0;
 
-	typename std::vector<chromosome_t<T> >::iterator i;
+	std::vector<DNA_t>::iterator i;
 	
 	for (i = population->begin(); i != population->end(); ++i)
 	{
@@ -49,7 +47,7 @@ chromosome_t<T> roulette_selection(typename std::vector< chromosome_t<T> > *popu
 		}
 	}
 
-	return NULL;
+	throw "Bad selection";	
 }
 
 // void crossover(float rate, std::string *offspring1, std::string *offspring2)

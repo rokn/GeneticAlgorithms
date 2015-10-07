@@ -1,0 +1,12 @@
+/tmp/ccaiP5lk.o: In function `main':
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:41: undefined reference to `chromosome_t<char>::chromosome_t(char (*)(), int)'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:61: undefined reference to `chromosome_t<char>::set_fitness(float)'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:63: undefined reference to `chromosome_t<char>::get_fitness()'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:73: undefined reference to `chromosome_t<char> roulette_selection<char>(std::vector<chromosome_t<char>, std::allocator<chromosome_t<char> > >*, int)'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:74: undefined reference to `chromosome_t<char> roulette_selection<char>(std::vector<chromosome_t<char>, std::allocator<chromosome_t<char> > >*, int)'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:76: undefined reference to `chromosome_t<char>::crossover(float, chromosome_t<char>*)'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:78: undefined reference to `chromosome_t<char>::mutate(float, char (*)())'
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:79: undefined reference to `chromosome_t<char>::mutate(float, char (*)())'
+/tmp/ccaiP5lk.o: In function `DecodeGenes(chromosome_t<char>)':
+/home/emil/Toni/GeneticAlgorithms/PhraseFinder/main.cpp:147: undefined reference to `chromosome_t<char>::get_genes()'
+collect2: error: ld returned 1 exit status

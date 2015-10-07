@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
-#include "GENETICS/chromo.h"
-#include "GENETICS/genetics.h"
 #include <time.h>
 #include <stdlib.h>
 #include <cmath>
+#include "chromo.h"
+#include "genetics.h"
 
 #define POPULATION_SIZE 300
 #define GENE_LENGTH 5
@@ -16,17 +16,17 @@ using namespace std;
 
 int GENES_COUNT;
 
-float CalculateFitness(string, string);
-string DecodeGenes(string);
-int BinToDec(string);
-void PrintSolution(string);
+float CalculateFitness(chromosome_t<char>, string);
+string DecodeGenes(chromosome_t<char>);
+void PrintSolution(chromosome_t<char>);
 bool contains(string, char);
+char get_random_gene();
 
 int main()
 {	
 	srand(time(NULL));
-	vector<chromosome_t> population;
-	vector<chromosome_t> tmp;
+	vector<chromosome_t<char> > population;
+	vector<chromosome_t<char> > tmp;
 	bool end = false;
 	string target;
 	int generations = 0;
@@ -38,7 +38,7 @@ int main()
 	
 	for (i = 0; i < POPULATION_SIZE; ++i)
 	{
-		chromosome_t chromo(get_random_chromo(GENES_COUNT * GENE_LENGTH), 0);
+		chromosome_t<char> chromo(get_random_gene, GENES_COUNT);
 		population.push_back(chromo);
 	}
 
@@ -46,43 +46,40 @@ int main()
 	{
 		generations ++;
 
-		PrintSolution(population.front().get_genes());
+		PrintSolution(population.front());
 		if(generations > MAX_GENERATIONS)
 		{
 			break;
 		}
 
 		tmp.clear();
-		vector<chromosome_t>::iterator it;
+		vector<chromosome_t<char> >::iterator it;
 
 		for (it = population.begin(); it != population.end(); ++it)
 		{
 
-			it->set_fitness(CalculateFitness(it->get_genes(), target));
+			it->set_fitness(CalculateFitness(*it, target));
 
 			if(it->get_fitness() > 99999.0f)
 			{
 				end = true;
-				PrintSolution(it->get_genes());
+				PrintSolution(*it);
 				break;
 			}
 		}
 
 		for (i = 0; i < POPULATION_SIZE; ++i)
 		{
-			string offspring1 = roulette_selection(&population, POPULATION_SIZE);
-			string offspring2 = roulette_selection(&population, POPULATION_SIZE);
+			chromosome_t<char> offspring1 = roulette_selection(&population, POPULATION_SIZE);
+			chromosome_t<char> offspring2 = roulette_selection(&population, POPULATION_SIZE);
 			
-			crossover_each(CROSSOVER_RATE, &offspring1, &offspring2, GENE_LENGTH);
+			offspring1.crossover(CROSSOVER_RATE, &offspring2);
 
-			mutate(MUTATION_RATE, &offspring1);
-			mutate(MUTATION_RATE, &offspring2);
+			offspring1.mutate(MUTATION_RATE, get_random_gene);
+			offspring2.mutate(MUTATION_RATE, get_random_gene);
 
-			chromosome_t chromo1(offspring1, 0);
-			chromosome_t chromo2(offspring2, 0);
-
-			tmp.push_back(chromo1);
-			tmp.push_back(chromo2);
+			tmp.push_back(offspring1);
+			tmp.push_back(offspring2);
 		}		
 
 		population = tmp;
@@ -102,7 +99,7 @@ int main()
 	return 0;
 }
 
-float CalculateFitness(string genes, string target)
+float CalculateFitness(chromosome_t<char> genes, string target)
 {
 	float fitness = 0;
 
@@ -131,6 +128,7 @@ float CalculateFitness(string genes, string target)
 			fitness++;
 		}
 	}
+
 	fitness *= fitness;
 	// PrintSolution(genes);
 	// cout << "f" << fitness << endl;	
@@ -138,47 +136,21 @@ float CalculateFitness(string genes, string target)
 	return fitness;
 }
 
-string DecodeGenes(string genes)
+string DecodeGenes(chromosome_t<char> genes)
 {
 	string decoded;
 	
 	int i;
-	int curr_gene;
 
 	for (i = 0; i < GENES_COUNT; ++i)
 	{
-		curr_gene = BinToDec(genes.substr(i * GENE_LENGTH, GENE_LENGTH));
-
-		if(curr_gene < 26)
-		{
-			decoded.push_back('a' + curr_gene);			
-		}
-		else if(curr_gene == 27)
-		{
-			decoded.push_back(' ');
-		}
+		decoded.push_back(genes.get_genes().at(i));
 	}
 
 	return decoded;
 }
 
-int BinToDec(string binary)
-{
-	int numb = 0;
-	int i;
-	
-	for (i = binary.length() - 1; i >= 0; --i)
-	{
-		if(binary[i] == '1')
-		{
-			numb += pow(2, (binary.length() - 1) - i);
-		}
-	}
-
-	return numb;
-}
-
-void PrintSolution(string genes)
+void PrintSolution(chromosome_t<char> genes)
 {
 	string decoded = DecodeGenes(genes);
 
@@ -198,4 +170,10 @@ bool contains(string str, char ch)
 	}
 
 	return false;
+}
+
+
+char get_random_gene()
+{
+	return (char)(rand() % 91 + 32);
 }
