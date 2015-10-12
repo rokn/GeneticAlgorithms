@@ -4,73 +4,84 @@
 
 using namespace std;
 
-bool AGE_Engine::Init(const char* windowTitle,int screenWidth, int screenHeight, bool vSync)
+AGE_Engine::AGE_Engine()
+{
+	if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
+	{
+		cout << "SDL could not initialize! SDL Error: " << SDL_GetError() << endl;
+	}
+}
+
+bool AGE_Engine::Init(const char* windowTitle,int screenWidth, int screenHeight, bool fullscreen, bool vSync)
 {
 	bool success = true;
 	VSynced = vSync;
 	SetMaxFPS(60);
 	
-	if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
+	
+	if( !SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY, "1" ) )
 	{
-		cout << "SDL could not initialize! SDL Error: " << SDL_GetError() << endl;
+		cout << "Warning: Linear texture filtering not enabled!" << endl;
+	}
+	Uint32 flags;
+
+	if(fullscreen)
+	{
+		flags = SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN;
+	}
+	else
+	{
+		flags = SDL_WINDOW_SHOWN;
+	}
+	
+	window = SDL_CreateWindow( windowTitle, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, screenWidth, screenHeight, flags);
+	windowRect = new AGE_Rect(0,0,screenWidth,screenHeight);
+
+	if( window == NULL )
+	{
+		cout << "window could not be created! SDL Error: " << SDL_GetError() << endl;
 		success = false;
 	}
 	else
 	{
-		if( !SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY, "1" ) )
+		if(VSynced)
 		{
-			cout << "Warning: Linear texture filtering not enabled!" << endl;
+			renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+		}
+		else
+		{
+			renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED);				
 		}
 
-		window = SDL_CreateWindow( windowTitle, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, screenWidth, screenHeight, SDL_WINDOW_SHOWN |SDL_WINDOW_FULLSCREEN);
-		windowRect = new AGE_Rect(0,0,screenWidth,screenHeight);
-
-		if( window == NULL )
+		if( renderer == NULL )
 		{
-			cout << "window could not be created! SDL Error: " << SDL_GetError() << endl;
+			cout << "Renderer could not be created! SDL Error: " << SDL_GetError() << endl;
 			success = false;
 		}
 		else
 		{
-			if(VSynced)
-			{
-				renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-			}
-			else
-			{
-				renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED);				
-			}
+			SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
 
-			if( renderer == NULL )
+			int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
+			if( !( IMG_Init( imgFlags ) & imgFlags ) )
 			{
-				cout << "Renderer could not be created! SDL Error: " << SDL_GetError() << endl;
+				cout << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << endl;
 				success = false;
 			}
-			else
+
+			if(TTF_Init() == -1)
 			{
-				SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
-
-				int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
-				if( !( IMG_Init( imgFlags ) & imgFlags ) )
-				{
-					cout << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << endl;
-					success = false;
-				}
-
-				if(TTF_Init() == -1)
-				{
-					cout << "SDL_ttf init error" << endl;
-					success = false;
-				}
-
-				// camera_age.Offset.X = 0;
-				// camera_age.Offset.Y = 0;
-				
-				AGE_Vector zeroV(0.0f, 0.0f);
-				// AGE_SetCameraTransform(zeroV);
-				AGE_ViewRect.SetWidth(windowRect->GetWidth());
-				AGE_ViewRect.SetHeight(windowRect->GetHeight());
+				cout << "SDL_ttf init error" << endl;
+				success = false;
 			}
+
+			// camera_age.Offset.X = 0;
+			// camera_age.Offset.Y = 0;
+			
+			AGE_Vector zeroV(0.0f, 0.0f);
+			// AGE_SetCameraTransform(zeroV);
+			AGE_ViewRect.SetWidth(windowRect->GetWidth());
+			AGE_ViewRect.SetHeight(windowRect->GetHeight());
 		}
 	}
 
@@ -226,4 +237,12 @@ void AGE_Engine::FullScreenBorderless()
 void AGE_Engine::SetRenderTarget(SDL_Texture* texture)
 {
 	SDL_SetRenderTarget(this->renderer, texture);
+}
+
+void AGE_Engine::GetDesktopResolution(int& width, int& height)
+{
+	SDL_DisplayMode mode;
+	SDL_GetCurrentDisplayMode(0, &mode);
+	width = mode.w;
+	height = mode.h;
 }

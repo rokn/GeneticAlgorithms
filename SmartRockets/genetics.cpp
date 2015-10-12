@@ -22,15 +22,15 @@
 // 	return genes;
 // }
 
-DNA_t roulette_selection(std::vector<DNA_t> *population, int pop_size)
+rocket_t roulette_selection(std::vector<rocket_t> *population, int pop_size)
 {
 	float total_fitness = 0;
 
-	std::vector<DNA_t>::iterator i;
+	std::vector<rocket_t>::iterator i;
 	
 	for (i = population->begin(); i != population->end(); ++i)
 	{
-		total_fitness += (*i).get_fitness();
+		total_fitness += i->get_dna()->get_fitness();
 	}
 
 	float random_fitness = RANDOM_NUM * total_fitness;
@@ -39,7 +39,7 @@ DNA_t roulette_selection(std::vector<DNA_t> *population, int pop_size)
 	
 	for (i = population->begin(); i != population->end(); ++i)
 	{
-		curr_fitness += (*i).get_fitness();
+		curr_fitness += i->get_dna()->get_fitness();
 
 		if(curr_fitness >= random_fitness)
 		{

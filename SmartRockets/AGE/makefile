@@ -14,9 +14,12 @@ COMPILER_FLAGS = -w -c
 #error log
 ERROR_LOG = log.txt
 
-#LINKER FLAGS for libraries
-LINKER_FLAGS = -lSDL2 -lSDL2_image -lSDL2_ttf -lm -Ilua-5.0.2/include/ -Llua-5.0.2/lib/ -llua
+#LINKER FLAGS for libraries  # -Ilua-5.0.2/include/ -Llua-5.0.2/lib/ -llua
+LINKER_FLAGS = -lSDL2 -lSDL2_image -lSDL2_ttf -lm 
 
 
 all : $(AGE)
-	$(CC) $(COMPILER_FLAGS) $(AGE) $(LINKER_FLAGS) 2> $(ERROR_LOG) && ar rcs libAGE.a $(AGE_OBJS) && rm *.o && beep
+	$(CC) $(COMPILER_FLAGS) $(AGE) $(LINKER_FLAGS) 2> $(ERROR_LOG) && ar rcs libAGE.a $(AGE_OBJS) && rm *.o || subl log.txt
+
+install_dev :
+	apt-get install libsdl2-dev && apt-get install libsdl2-image-dev &&  apt-get install libsdl2-ttf-dev

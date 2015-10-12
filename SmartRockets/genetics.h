@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <vector>
 #include "dna.h"
+#include "rocket.h"
 
-DNA_t roulette_selection(std::vector<DNA_t> *, int);
+rocket_t roulette_selection(std::vector<rocket_t> *, int);
 
 #endif

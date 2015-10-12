@@ -1,10 +1,12 @@
 #include "AGE.h"
 #include "AGE_Graphics.h"
 
+#define RAD_TO_DEG 3.141592653589793 / 180.0
+
 AGE_Vector AGE_Helper_RotatedVectorMove(AGE_Vector position, float rotation, float speed)
 {
-    position.AddX(speed * (float)cos(rotation));
-    position.AddY(speed * (float)sin(rotation));
+    position.AddX(speed * (float)cos(rotation * RAD_TO_DEG));
+    position.AddY(speed * (float)sin(rotation * RAD_TO_DEG));
     return position;
 }
 

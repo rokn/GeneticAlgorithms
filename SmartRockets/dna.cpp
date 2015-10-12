@@ -9,13 +9,11 @@ DNA_t::DNA_t() : fitness(0) {}
 
 DNA_t::DNA_t( const DNA_t &obj)
 {
-	this->genes = new vector<float>;
-
 	int i;
 	
-	for (i = 0; i < obj.genes->size(); ++i)
+	for (i = 0; i < obj.genes.size(); ++i)
 	{
-		this->genes->push_back(obj.genes->at(i));
+		this->genes.push_back(obj.genes.at(i));
 	}
 }
 
@@ -25,19 +23,17 @@ DNA_t::DNA_t(float (*get_random_gene)(), int gene_count)
 	
 	for (i = 0; i < gene_count; ++i)
 	{
-		this->genes->push_back(get_random_gene());
+		this->genes.push_back(get_random_gene());
 	}
 }
 
 DNA_t::DNA_t(vector<float> new_genes, float new_fitness) : fitness(new_fitness) 
 {
-	this->genes = new vector<float>;
-
 	int i;
 	
 	for (i = 0; i < new_genes.size(); ++i)
 	{
-		this->genes->push_back(new_genes.at(i));
+		this->genes.push_back(new_genes.at(i));
 	}
 }
 
@@ -53,7 +49,7 @@ float DNA_t::get_fitness()
 
 vector<float> DNA_t::get_genes()
 {
-	return *(this->genes);
+	return this->genes;
 }
 
 void DNA_t::crossover(float rate, DNA_t *offspring)
@@ -63,40 +59,40 @@ void DNA_t::crossover(float rate, DNA_t *offspring)
 		int i;
 		vector<float> tmp;
 
-		for (i = 0; i < this->genes->size(); i++)
+		for (i = 0; i < this->genes.size(); i++)
 		{
 			if(RANDOM_NUM >= 0.5)
 			{
-				tmp.push_back(this->genes->at(i));
+				tmp.push_back(this->genes.at(i));
 			}
 			else
 			{
-				tmp.push_back(offspring->genes->at(i));
+				tmp.push_back(offspring->genes.at(i));
 			}
 		}
 
-		for (i = 0; i < this->genes->size(); i++)
+		for (i = 0; i < this->genes.size(); i++)
 		{
 			if(RANDOM_NUM >= 0.5)
 			{
-				offspring->genes->at(i) = this->genes->at(i);
+				offspring->genes.at(i) = this->genes.at(i);
 			}
 		}
 
-		*(this->genes) = tmp;
+		this->genes = tmp;
 	}
 }
 
 void DNA_t::mutate(float rate, float (*get_random_gene)())
 {
 	int i;
-	for (i = 0; i < this->genes->size(); ++i)
+	for (i = 0; i < this->genes.size(); ++i)
 	{
 		float r = RANDOM_NUM;
 
 		if(rate >= r)
 		{
-			this->genes->at(i) = get_random_gene();
+			this->genes.at(i) = get_random_gene();
 		}
 	}
 }

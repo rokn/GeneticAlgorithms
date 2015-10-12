@@ -20,8 +20,8 @@ OBJ_NAME = PROG
 # this is the compile line
 
 all : $(OBJS) 
-	$(CC) $(OBJS) $(AGE) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ_NAME) 2> $(ERROR_LOG) && ./$(OBJ_NAME) || subl $(ERROR_LOG)
-
+	$(CC) $(OBJS) $(AGE) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ_NAME) 2> $(ERROR_LOG) && ./$(OBJ_NAME) 
+#|| subl $(ERROR_LOG)
 install :
 	apt-get install libsdl2-2.0-0 && apt-get install libsdl2-image-2.0-0 &&  apt-get install libsdl2-ttf-2.0-0
 

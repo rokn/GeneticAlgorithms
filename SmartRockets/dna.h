@@ -12,7 +12,7 @@ using namespace std;
 class DNA_t
 {
 	float fitness;
-	vector<float>* genes;
+	vector<float> genes;
 
 public:
 	DNA_t();

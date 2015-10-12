@@ -9,7 +9,7 @@ def get_random_genes (count)
 	genes = Array.new(count)
 
 	for i in 0...count
-		genes[i] = (rand(122-97) + 97).chr
+		genes[i] = (rand(125-32) + 32).chr
 	end
 
 	return genes

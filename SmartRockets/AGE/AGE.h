@@ -63,7 +63,8 @@ class AGE_Engine
 public:
 	friend class AGE_Sprite;
 	friend class AGE_SpriteBatch;
-	bool Init(const char* windowTitle,int screenWidth, int screenHeight, bool vSync);
+	AGE_Engine();
+	bool Init(const char* windowTitle,int screenWidth, int screenHeight, bool fullscreen, bool vSync);
 	void Run(EventHandle_age, UserUpdate_age, UserDraw_age);
 	void SetMaxFPS(int);
 	int GetCurrFPS();
@@ -73,6 +74,7 @@ public:
 	void SetRenderTarget(SDL_Texture *);
 	AGE_Rect GetWindowRect();
 	void FullScreenBorderless();
+	void GetDesktopResolution(int& width, int& height);
 	void Destroy();
 	void Exit();
 };
