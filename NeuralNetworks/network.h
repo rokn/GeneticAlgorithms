@@ -12,18 +12,20 @@ using namespace std;
 
 class Network_t
 {	
+	public:
 	int layers;
 	vector<int> sizes;
 	vector< vector<double> > biases;
 	vector< vector< vector <double> > > weights;
-	DNA_t dna;
+	DNA_t* dna;
 
 	void generate_dna();
-	public:
+
+
 	Network_t(vector<int>);
 	double sigmoid(double z);
 	DNA_t get_dna();
-	void update_dna();
+	void update_dna(DNA_t);
 	vector<double> feed_forward(vector<double> inputs);
 };
 

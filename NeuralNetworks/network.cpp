@@ -43,6 +43,8 @@ Network_t::Network_t(vector<int> layerSizes)
 
 		this->weights.push_back(tmp);
 	}
+
+	generate_dna();
 }
 
 double Network_t::sigmoid(double z)
@@ -87,32 +89,59 @@ void Network_t::generate_dna()
 {
 	vector<float> new_dna;
 
-	int i;
+	int i,b,j;
 	
 	for (i = 0; i < weights.size(); ++i)
-	{
-		int j;
-		
+	{		
 		for (j = 0; j < weights[i].size(); ++j)
 		{
-			int b;
-			
 			for (b = 0; b < weights[i][j].size(); ++b)
 			{
 				new_dna.push_back(weights[i][j][b]);
 			}
 		}
 	}
+
+	for (i = 0; i < biases.size(); ++i)
+	{				
+		for (b = 0; b < biases[i].size(); ++b)
+		{
+			new_dna.push_back(biases[i][b]);
+		}
+	}
+
+	dna = new DNA_t(new_dna, 0);
 }
 
 DNA_t Network_t::get_dna()
 {
-
+	return *dna;
 }
 
-void Network_t::update_dna()
+void Network_t::update_dna(DNA_t new_dna)
 {
+	*dna = new_dna;
+	int c = 0;
+	int i,b,j;
+	
+	for (i = 0; i < weights.size(); ++i)
+	{		
+		for (j = 0; j < weights[i].size(); ++j)
+		{
+			for (b = 0; b < weights[i][j].size(); ++b)
+			{
+				weights[i][j][b] = new_dna.get_genes()[c++];
+			}
+		}
+	}
 
+	for (i = 0; i < biases.size(); ++i)
+	{				
+		for (b = 0; b < biases[i].size(); ++b)
+		{
+			biases[i][b] = new_dna.get_genes()[c++];
+		}
+	}
 }
 
 // [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]

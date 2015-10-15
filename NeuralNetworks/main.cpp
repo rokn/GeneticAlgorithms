@@ -11,61 +11,9 @@ int main(int argc, char const *argv[])
 	srand(time(NULL));
 	vector<int> layers;
 	layers.push_back(3);
-	layers.push_back(5);
-	layers.push_back(5);
-	layers.push_back(5);
-	layers.push_back(5);
-	layers.push_back(5);
-	layers.push_back(5);
+	layers.push_back(6);
 	layers.push_back(3);
 	Network_t network(layers);
-
-	vector<double> input;
-	input.push_back(1);
-	input.push_back(1);
-	input.push_back(1);
-	input = network.feed_forward(input);
-
-	int i;
-	
-	for (i = 0; i < input.size(); ++i)
-	{
-		cout << input[i] << endl;
-	}
-
-	return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	// cout << "Layers : " << network.layers << endl;
 
@@ -102,3 +50,31 @@ int main(int argc, char const *argv[])
 	// cout << "weights[1][3].size : " << network.weights.at(1).at(3).size() << endl;
 	// cout << "weights[1][3][0] : " << network.weights.at(1).at(3).at(0) << endl;
 	// cout << "weights[1][3][1] : " << network.weights.at(1).at(3).at(1) << endl;
+
+	vector<double> input;
+	input.push_back(1);
+	input.push_back(1);
+	input.push_back(1);
+	input = network.feed_forward(input);
+
+	int i;
+	
+	for (i = 0; i < input.size(); ++i)
+	{
+		cout << input[i] << endl;
+	}
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
